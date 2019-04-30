@@ -26,15 +26,7 @@ function getDamage() {
 
 //main game function
 function startCombat() {
-  let userAction = prompt("Would you like to attack or quit?", "attack");
-  while (userAction !== "attack") {
-    if (userAction === "quit") {
-      console.log("OK, see you later.");
-      return;
-    } else {
-      userAction = prompt("Please enter 'attack' or 'quit'.", "attack");
-    }
-  }
+  let userAction = "attack"; //default to attack to start, then ask after each iteration
 
   while (userAction === "attack") {
     //Grant's turn

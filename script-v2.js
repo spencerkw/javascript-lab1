@@ -27,6 +27,14 @@ function getDamage() {
 //main game function
 function startCombat() {
   let userAction = prompt("Would you like to attack or quit?", "attack");
+  while (userAction !== "attack") {
+    if (userAction === "quit") {
+      console.log("OK, see you later.");
+      return;
+    } else {
+      userAction = prompt("Please enter 'attack' or 'quit'.", "attack");
+    }
+  }
 
   while (userAction === "attack") {
     //Grant's turn
@@ -53,6 +61,14 @@ function startCombat() {
     }
 
     userAction = prompt("Would you like to attack or quit?", "attack");
+    while (userAction !== "attack") {
+      if (userAction === "quit") {
+        console.log("OK, see you later.");
+        return;
+      } else {
+        userAction = prompt("Please enter 'attack' or 'quit'.", "attack");
+      }
+    }
   }
 
   //after game is over
@@ -61,8 +77,6 @@ function startCombat() {
   } else {
     console.log(`${userName} has been defeated.`);
   }
-
-  return;
 }
 
 //when page loads, start the game

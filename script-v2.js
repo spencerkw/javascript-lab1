@@ -12,7 +12,7 @@ let userWon = false; //boolean for win/loss
 //function run to start the game when the page loads
 function startGame() {
   if (confirm("Do you want to fight Grant?")) {
-    userName = prompt("Enter your name.");
+    userName = prompt("Enter your name.", "Kiryu");
     startCombat();
   } else {
     console.log("OK, see you later.");
@@ -61,6 +61,8 @@ function startCombat() {
   } else {
     console.log(`${userName} has been defeated.`);
   }
+
+  return;
 }
 
 //when page loads, start the game
